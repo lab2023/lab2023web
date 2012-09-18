@@ -1,4 +1,6 @@
 Lab2023web::Application.routes.draw do
+  resources :customers
+
   resources :teams
 
   resources :projects
