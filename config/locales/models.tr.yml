@@ -1,0 +1,28 @@
+tr:
+  activerecord:
+    models:
+      role: Rol
+      user: Kullanıcı
+    attributes:
+      created_at: "Oluşturulma tarihi"
+      updated_at: "Güncelleme tarihi"
+      role:
+        name: İsmi
+      user:
+        name: İsim Soyisim
+        admin: Yönetici
+        email: Elektronik Posta
+        password: Şifre
+        password_confirmation: Şifre Onayı
+        current_password: Şu An Kullandığız Şifreniz
+        locale: Dil
+        remember_me: Beni Hatırla
+        time_zone: Zaman Dilimi
+      admin:
+        name: Ad Soyad
+        email: E-Posta
+        password: Şifre
+        password_confirmation: Şifre (Tekrar)
+        current_password: Mevcut Şifreniz
+        remember_me: Beni Hatırla
+        time_zone: Zaman Dilimi
