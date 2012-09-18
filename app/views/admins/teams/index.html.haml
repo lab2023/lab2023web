@@ -3,7 +3,8 @@
 - content_for :toolbar_left do
   = link_to(new_admins_team_path, class: 'btn', rel: 'tooltip', title: t('tooltips.new')) do
     %i.icon-plus
-
+  = link_to(admins_dashboard_index_path , class: 'btn', rel: 'tooltip', title: t('tooltips.back')) do
+    %i.icon-arrow-left
 
 %table.table.table-striped.table-bordered.table-condensed
   %tr

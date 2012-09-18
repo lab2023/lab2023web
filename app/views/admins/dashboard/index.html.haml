@@ -1,1 +1,15 @@
+- content_for :toolbar_right do
+  = link_to(admins_teams_path, class: 'btn', rel: 'tooltip', title: t('teams')) do
+    %i.icon-eye-open
+    =t('teams')
+  = link_to(admins_projects_path, class: 'btn', rel: 'tooltip', title: t('projects')) do
+    %i.icon-eye-open
+    =t('projects')
+  = link_to(admins_open_sources_path, class: 'btn', rel: 'tooltip', title: t('open_sources')) do
+    %i.icon-eye-open
+    =t('open_sources')
+  = link_to(admins_customers_path, class: 'btn', rel: 'tooltip', title: t('customers')) do
+    %i.icon-eye-open
+    =t('customers')
+
 %h1 Welcome to admin dashboard
