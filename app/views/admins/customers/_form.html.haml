@@ -1,4 +1,4 @@
-= simple_form_for([:admins, @customer]) do |f|
+= simple_form_for([:admins, @customer], :defaults => {:input_html => {:class => 'span12'}}) do |f|
   = f.error_notification
 
   .form-inputs

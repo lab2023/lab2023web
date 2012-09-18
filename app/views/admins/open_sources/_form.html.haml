@@ -1,4 +1,4 @@
-= simple_form_for([:admins, @open_source]) do |f|
+= simple_form_for([:admins, @open_source], :defaults => {:input_html => {:class => 'span12'}}) do |f|
   = f.error_notification
 
   .form-inputs

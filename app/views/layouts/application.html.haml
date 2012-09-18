@@ -47,9 +47,9 @@
               %a.close{"data-dismiss" => "alert", :href => "#"} &times;
               = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
     .container
-      .wrapper
-        .wrap
-          .head.row-fluid
+      .wrapper.row-fluid
+        .span12.wrap
+          .head
             .span4.pull-left
               = yield :toolbar_left
             .span4.title
