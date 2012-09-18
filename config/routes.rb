@@ -1,4 +1,6 @@
 Lab2023web::Application.routes.draw do
+  resources :projects
+
   resources :open_sources
 
   root :to => 'pages#index'
