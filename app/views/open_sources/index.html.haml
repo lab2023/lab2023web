@@ -1,0 +1,27 @@
+= title t('tt.index', resource_name: Open_source.model_name.human)
+
+- content_for :toolbar_left do
+  = link_to(new_open_source_path, class: 'btn', rel: 'tooltip', title: t('tooltips.new')) do
+    %i.icon-plus
+
+
+%table.table.table-striped.table-bordered.table-condensed
+  %tr
+    %th Name
+    %th Repostory url
+    %th Twitter username
+    %th Facebook page
+    %th{:width => "120px"}
+  - @open_sources.each do |open_source|
+    %tr
+      %td= open_source.name
+      %td= open_source.repostory_url
+      %td= open_source.twitter_username
+      %td= open_source.facebook_page
+      %td
+        = link_to(open_source, class: 'btn', rel: 'tooltip', title: t('tooltips.show')) do
+          %i.icon-eye-open
+        = link_to(edit_open_source_path(open_source) , class: 'btn', rel: 'tooltip', title: t('tooltips.edit')) do
+          %i.icon-pencil
+        = link_to(open_source, class: 'btn', confirm: t('confirm'), method: :delete, rel: 'tooltip', title: t('tooltips.delete')) do
+          %i.icon-trash

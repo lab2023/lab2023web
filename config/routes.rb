@@ -1,4 +1,6 @@
 Lab2023web::Application.routes.draw do
+  resources :open_sources
+
   root :to => 'pages#index'
 
    devise_for :admins, :controllers => { :sessions => "admins/sessions", :registrations =>  "admins/registrations"}
