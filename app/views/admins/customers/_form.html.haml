@@ -1,0 +1,9 @@
+= simple_form_for([:admins, @customer]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :website
+
+  .form-actions
+    = f.button :submit

@@ -1,22 +1,17 @@
 Lab2023web::Application.routes.draw do
-  resources :customers
-
-  resources :teams
-
-  resources :projects
-
-  resources :open_sources
 
   root :to => 'pages#index'
 
-   devise_for :admins, :controllers => { :sessions => "admins/sessions", :registrations =>  "admins/registrations"}
-   namespace :admins do
+  devise_for :admins, :controllers => { :sessions => "admins/sessions", :registrations =>  "admins/registrations"}
+  namespace :admins do
     resources :dashboard
+    resources :customers
+    resources :teams
+    resources :projects
+    resources :open_sources
   end
 
-
   devise_for :users
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
