@@ -5,7 +5,6 @@ Lab2023web::Application.routes.draw do
   devise_for :admins, :controllers => { :sessions => "admins/sessions", :registrations =>  "admins/registrations"}
   namespace :admins do
     resources :dashboard
-    resources :customers
     resources :teams
     resources :projects
     resources :open_sources
