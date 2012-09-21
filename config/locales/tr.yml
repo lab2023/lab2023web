@@ -4,3 +4,7 @@
 tr:
   hello: "Hello world"
   search: "Ara"
+  teams: Ekip
+  customers: Müşteriler
+  open_sources: Açık Kaynak
+  projects: Projeler
