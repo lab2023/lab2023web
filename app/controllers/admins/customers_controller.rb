@@ -1,6 +1,6 @@
 class Admins::CustomersController < Admins::ApplicationController
   def index
-    @customers = Customer.all
+    @customers = Customer.paginate(:page => params[:page])
     respond_with(:admins, @customers)
   end
 

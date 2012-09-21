@@ -26,3 +26,5 @@
           %i.icon-pencil
         = link_to(admins_open_source_path(open_source), class: 'btn', confirm: t('confirm'), method: :delete, rel: 'tooltip', title: t('tooltips.delete')) do
           %i.icon-trash
+%hr/
+= will_paginate @open_sources

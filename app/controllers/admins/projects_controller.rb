@@ -1,6 +1,6 @@
 class Admins::ProjectsController < Admins::ApplicationController
   def index
-    @projects = Project.all
+    @projects = Project.paginate(:page => params[:page])
     respond_with(:admins, @projects)
   end
 

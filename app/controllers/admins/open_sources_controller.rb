@@ -1,6 +1,6 @@
 class Admins::OpenSourcesController < Admins::ApplicationController
   def index
-    @open_sources = OpenSource.all
+    @open_sources = OpenSource.paginate(:page => params[:page])
     respond_with(:admins, @open_sources)
   end
 
