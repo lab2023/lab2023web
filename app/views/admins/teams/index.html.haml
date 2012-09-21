@@ -11,12 +11,12 @@
     %th Avatar
     %th Adı Soyadı
     %th Elektronik Posta
-    %th{:width => "120px"}
+    %th{:width => "140px"}
   - @teams.each do |team|
     %tr
       %td
         .thumbnail
-          = image_tag team.avatar.url(:small)
+          = image_tag team.avatar
       %td= team.name
       %td= team.mail
       %td
