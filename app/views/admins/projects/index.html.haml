@@ -8,21 +8,17 @@
 
 %table.table.table-striped.table-bordered.table-condensed
   %tr
+    %th Picture
     %th Name
-    %th Description
     %th Website
-    %th Owner
-    %th Twitter username
-    %th Facebook page
     %th{:width => "120px"}
   - @projects.each do |project|
     %tr
+      %td
+        .thumbnail
+          = image_tag project.picture.url(:small)
       %td= project.name
-      %td= project.description
       %td= project.website
-      %td= project.owner
-      %td= project.twitter_username
-      %td= project.facebook_page
       %td
         = link_to(admins_project_path(project), class: 'btn', rel: 'tooltip', title: t('tooltips.show')) do
           %i.icon-eye-open

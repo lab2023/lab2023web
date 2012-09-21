@@ -8,11 +8,15 @@
 
 %table.table.table-striped.table-bordered.table-condensed
   %tr
+    %th Logo
     %th Name
     %th Website
     %th{:width => "120px"}
   - @customers.each do |customer|
     %tr
+      %td
+        .thumbnail
+          = image_tag customer.logo.url(:small)
       %td= customer.name
       %td= customer.website
       %td

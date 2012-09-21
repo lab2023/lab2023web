@@ -8,21 +8,17 @@
 
 %table.table.table-striped.table-bordered.table-condensed
   %tr
+    %th Avatar
     %th Name
-    %th Description
     %th Mail
-    %th Github username
-    %th Twitter username
-    %th Facebook username
     %th{:width => "120px"}
   - @teams.each do |team|
     %tr
+      %td
+        .thumbnail
+          = image_tag team.avatar.url(:small)
       %td= team.name
-      %td= team.description
       %td= team.mail
-      %td= team.github_username
-      %td= team.twitter_username
-      %td= team.facebook_username
       %td
         = link_to(admins_team_path(team), class: 'btn', rel: 'tooltip', title: t('tooltips.show')) do
           %i.icon-eye-open
