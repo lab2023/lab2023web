@@ -3,7 +3,7 @@ tr:
     models:
       role: Rol
       user: Kullanıcı
-      open_source: Açık Kaynaklı Porjeler
+      open_source: Açık Projeler
       project: Projeler
       team: Ekip
     attributes:
