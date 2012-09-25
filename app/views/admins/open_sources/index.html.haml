@@ -8,8 +8,10 @@
 
 %table.table.table-striped.table-bordered.table-condensed
   %tr
-    %th Açık Kaynak Proje Adı
-    %th Repo Adresi
+    %th
+      = t('activerecord.attributes.open_source.name')
+    %th
+      = t('activerecord.attributes.open_source.repostory_url')
     %th{:width => "140px"}
   - @open_sources.each do |open_source|
     %tr

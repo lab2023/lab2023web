@@ -8,9 +8,12 @@
 
 %table.table.table-striped.table-bordered.table-condensed
   %tr
-    %th Avatar
-    %th Adı Soyadı
-    %th Elektronik Posta
+    %th
+      = t('activerecord.attributes.team.avatar')
+    %th
+      = t('activerecord.attributes.team.name')
+    %th
+      = t('activerecord.attributes.team.mail')
     %th{:width => "140px"}
   - @teams.each do |team|
     %tr

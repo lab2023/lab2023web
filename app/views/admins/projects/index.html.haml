@@ -8,15 +8,13 @@
 
 %table.table.table-striped.table-bordered.table-condensed
   %tr
-    %th Resim
-    %th Proje Adı
-    %th Website
+    %th
+      =t('activerecord.attributes.project.name')
+    %th
+      =t('activerecord.attributes.project.website')
     %th{:width => "140px"}
   - @projects.each do |project|
     %tr
-      %td
-        .thumbnail
-          = image_tag project.picture.url(:small)
       %td= project.name
       %td= project.website
       %td

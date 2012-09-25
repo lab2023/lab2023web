@@ -3,9 +3,12 @@ tr:
     models:
       role: Rol
       user: Kullanıcı
+      open_source: Açık Kaynaklı Porjeler
+      project: Projeler
+      team: Ekip
     attributes:
-      created_at: "Oluşturulma tarihi"
-      updated_at: "Güncelleme tarihi"
+      created_at: Oluşturulma tarihi
+      updated_at: Güncelleme tarihi
       role:
         name: İsmi
       user:
@@ -26,3 +29,24 @@ tr:
         current_password: Mevcut Şifreniz
         remember_me: Beni Hatırla
         time_zone: Zaman Dilimi
+      team:
+        name: İsim Soyisim
+        avatar: Avatar
+        description: Hakkında
+        mail: Elektronik Posta
+        github_username: Github Kullanıcı Adı
+        twitter_username: Twitter Kullanıcı Adı
+        facebook_username: Facebook Kullanıcı Adı
+      open_source:
+        name: Açık Kaynaklı Proje Adı
+        repostory_url: Repo Adresi
+        twitter_username: Twitter Kullanıcı Adı
+        facebook_page: Facebook Sayfa Adresi
+      project:
+        name: Proje Adı
+        description: Açıklama
+        website: Websitesi
+        owner: Sahibi
+        twitter_username: Twitter Kullanıcı Adı
+        facebook_page: Facebook Sayfa Adresi
+        picture: Resim
