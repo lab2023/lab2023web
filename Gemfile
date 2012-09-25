@@ -37,6 +37,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem 'gravatar_image_tag'
 gem "will_paginate"
 gem "bootstrap-will_paginate"
 gem "will-paginate-i18n", "~> 0.1.7"

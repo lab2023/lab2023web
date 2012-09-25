@@ -17,9 +17,9 @@
     %th{:width => "140px"}
   - @teams.each do |team|
     %tr
-      %td
+      %td{:width => "40px"}
         .thumbnail
-          = image_tag team.avatar
+          = gravatar_image_tag(team.mail, :alt => team.name, :gravatar => {:size => 34 })
       %td= team.name
       %td= team.mail
       %td
