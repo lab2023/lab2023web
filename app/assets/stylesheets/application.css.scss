@@ -21,7 +21,7 @@ body {
 }
 @import "bootstrap-responsive";
 .brand {
-  margin-left: 35px !important;
+  margin-left: 0px !important;
   img {
     position: absolute;
     margin-left: -40px;
@@ -87,4 +87,8 @@ div.container, div.container-fluid  {
 
 #add_button {
   float: left;
+}
+
+.nav {
+  margin: 0 !important;
 }

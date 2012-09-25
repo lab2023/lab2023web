@@ -6,8 +6,6 @@ class ApplicationController < ActionController::Base
   respond_to :html, :json, :xml
   WillPaginate.per_page = 10
 
-  before_filter :authenticate_user!
-
   protect_from_forgery
 
   rescue_from CanCan::AccessDenied do |exception|
