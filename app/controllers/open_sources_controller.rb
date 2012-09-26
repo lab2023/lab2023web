@@ -1,4 +1,5 @@
 class OpenSourcesController < ApplicationController
+  layout false, :only => [:show]
   def index
     @open_sources = OpenSource.all
     respond_with(@open_sources)

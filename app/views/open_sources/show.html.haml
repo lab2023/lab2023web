@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    = javascript_include_tag "documentup.min.js"
+  %body
+
+:javascript
+  DocumentUp.document({
+    repo:  "#{@open_source.repostory_url}",
+    //name: "DocumentUp",
+    twitter: ["#{@open_source.twitter_username}"],
+  });
