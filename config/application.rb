@@ -19,7 +19,7 @@ module Lab2023web
   class Application < Rails::Application
 
     config.time_zone = 'Istanbul'
-    config.i18n.default_locale = :tr
+    config.i18n.default_locale = :en
 
 
 
