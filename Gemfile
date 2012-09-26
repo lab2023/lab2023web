@@ -36,7 +36,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-
+gem 'friendly_id'
 gem "will_paginate"
 gem "bootstrap-will_paginate"
 gem "will-paginate-i18n", "~> 0.1.7"

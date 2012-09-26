@@ -3,4 +3,6 @@ class Project < ActiveRecord::Base
   has_attached_file :picture
   validates_presence_of :description, :facebook_page, :name, :owner, :twitter_username, :website
   validates_attachment :picture, :presence => true
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :history]
 end
