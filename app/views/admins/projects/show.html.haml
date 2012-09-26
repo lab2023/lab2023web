@@ -11,7 +11,9 @@
 = show_for @project do |s|
   = s.attribute :name
   = s.attribute :description
-  = s.attribute :picture
+  = s.attribute :picture do
+    .thumbnail
+      = image_tag(@project.picture.url)
   = s.attribute :website
   = s.attribute :owner
   = s.attribute :twitter_username

@@ -11,6 +11,9 @@
 = show_for @team do |s|
   = s.attribute :name
   = s.attribute :description
+  = s.attribute :avatar do
+    .thumbnail
+      = image_tag(@team.avatar.url)
   = s.attribute :mail
   = s.attribute :github_username
   = s.attribute :twitter_username
