@@ -1,0 +1,14 @@
+= title t('teams')
+%ul
+- @teams.each do |team|
+  %li.thumbnail
+    %p.screenshot
+      = image_tag(team.avatar.url)
+    %h4.title= team.name
+    %p= team.position
+    %p.info
+      %p= team.mail
+      %p= team.description
+      %p= team.github_username
+      %p= team.twitter_username
+      %pd= team.facebook_username
