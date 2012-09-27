@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(:version => 20120926113635) do
     t.text     "description"
     t.string   "mail"
     t.string   "github_username"
+    t.string   "dudupress_username"
+    t.string   "vidipanda_username"
     t.string   "twitter_username"
     t.string   "facebook_username"
     t.datetime "created_at",          :null => false

@@ -7,6 +7,8 @@ class CreateTeams < ActiveRecord::Migration
       t.text :description
       t.string :mail
       t.string :github_username
+      t.string :dudupress_username
+      t.string :vidipanda_username
       t.string :twitter_username
       t.string :facebook_username
 

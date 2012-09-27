@@ -36,6 +36,8 @@ tr:
         description: Hakkında
         mail: Elektronik Posta
         github_username: Github Kullanıcı Adı
+        vidipanda_username: Vidipanda Kullanıcı Adı
+        dudupress_username: Dudupress Kullanıcı Adı
         twitter_username: Twitter Kullanıcı Adı
         facebook_username: Facebook Kullanıcı Adı
       open_source:
