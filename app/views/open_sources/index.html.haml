@@ -1,0 +1,10 @@
+= title t('open_sources')
+
+%ul
+- @open_sources.each do |open_source|
+  %li.thumbnail
+    %h4.title= open_source.name
+    %p= open_source.repostory_url
+    %p.info
+      %p= open_source.twitter_username
+      %p= open_source.facebook_page
