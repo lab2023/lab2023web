@@ -2,6 +2,7 @@ class CreateTeams < ActiveRecord::Migration
   def change
     create_table :teams do |t|
       t.string :name
+      t.string :position
       t.string :avatar
       t.text :description
       t.string :mail

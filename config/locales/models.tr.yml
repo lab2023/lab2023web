@@ -31,6 +31,7 @@ tr:
         time_zone: Zaman Dilimi
       team:
         name: İsim Soyisim
+        position: Pozisyon
         avatar: Avatar
         description: Hakkında
         mail: Elektronik Posta

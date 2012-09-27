@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20120926113635) do
 
   create_table "teams", :force => true do |t|
     t.string   "name"
+    t.string   "position"
     t.string   "avatar"
     t.text     "description"
     t.string   "mail"
