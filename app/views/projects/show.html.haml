@@ -1,0 +1,11 @@
+= title t('activerecord.models.project')
+
+%table.table.table-striped.table-bordered.table-condensed
+  %tr
+    %td= image_tag(@project.picture.url)
+    %td= @project.name
+    %td= @project.description
+    %td= @project.website
+    %td= @project.owner
+    %td= @project.twitter_username
+    %td= @project.facebook_page

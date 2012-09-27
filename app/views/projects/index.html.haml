@@ -1,0 +1,9 @@
+=title t('projects')
+
+%ul
+- @projects.each do |project|
+  %li.thumbnail
+    %p.screenshot
+      = image_tag(project.picture.url)
+    %h4.title= project.name
+    %p= project.website
