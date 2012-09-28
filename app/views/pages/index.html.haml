@@ -1,0 +1,19 @@
+.text-center
+  = image_tag "http://lab2023.com/wp-content/uploads/2011/07/logo.png"
+%h1.text-center.we-build
+  We build web & mobile apps.
+
+.row-fluid
+  %ul.thumbnails
+    - @projects.each do |project|
+      %li.thumbnail.span3
+        = link_to image_tag(project.picture.url, alt: project.name), project_path(project), :class => "screenshot"
+        .caption
+          %h4.text-center= link_to project.name, project_path(project), title: project.name
+    -project = @projects.first
+    -1.upto(2) do
+      %li.thumbnail.span3
+        = link_to image_tag(project.picture.url, alt: project.name), project_path(project), :class => "screenshot"
+        .caption
+          %h4.text-center= link_to project.name, project_path(project), title: project.name
+
