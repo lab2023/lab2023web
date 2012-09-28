@@ -1,14 +1,18 @@
 = simple_form_for([:admins, @project], :defaults => {:input_html => {:class => 'span12'}}) do |f|
   = f.error_notification
-
-  .form-inputs
-    = f.input :name
-    = f.input :description
-    = f.input :picture, :as => :file
-    = f.input :website
-    = f.input :owner, :collection => [ "lab2023", "Müşteri"]
-    = f.input :twitter_username
-    = f.input :facebook_page
+  .row-fluid
+    .span6.well
+      .form-inputs
+        = f.input :name
+        = f.input :description
+    .span6.well
+      .form-inputs
+        = f.input :website
+        = f.input :owner, :collection => %w(lab2023 Müşteri)
+        = f.input :twitter_username
+        = f.input :facebook_page
+        = f.input :picture, :as => :file
 
   .form-actions
-    = f.button :submit
+    .pull-right
+      = f.button :submit

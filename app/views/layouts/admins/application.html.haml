@@ -25,13 +25,16 @@
           .nav-collapse
             %ul.nav
               %li
-                = link_to(admins_teams_path, title: t('teams')) do
+                = link_to(admins_teams_path) do
+                  %i.icon-user
                   =t('teams')
               %li
-                = link_to(admins_projects_path, title: t('projects')) do
+                = link_to(admins_projects_path) do
+                  %i.icon-list-alt
                   =t('projects')
               %li
-                = link_to(admins_open_sources_path, title: t('open_sources')) do
+                = link_to(admins_open_sources_path) do
+                  %i.icon-list-alt
                   =t('open_sources')
 
             %ul.nav.pull-right

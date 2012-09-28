@@ -1,16 +1,24 @@
 = title t('teams')
-%ul
+
 - @teams.each do |team|
-  %li.thumbnail
-    %p.screenshot
-      = image_tag(team.avatar.url)
-    %h4.title= team.name
-    %p= team.position
-    %p.info
-      %p= team.mail
+  .row-fluid
+    .span3
+      .thumbnail
+        = image_tag(team.avatar.url)
+    .span9
+
+      %h4= team.name
+      %p
+        %i= team.position
       %p= team.description
-      %p= team.github_username
-      %p= team.dudupress_username
-      %p= team.vidipanda_username
-      %p= team.twitter_username
-      %pd= team.facebook_username
+      %p
+        %i.icon-envelope
+        = team.mail
+      %iframe{:allowtransparency => "true", :frameborder => "0", :height => "20px", :scrolling => "0", :src => "http://ghbtns.com/github-btn.html?user=#{team.github_username}&type=follow"}
+      %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/#{team.twitter_username}"}= "Follow @#{team.twitter_username}"
+      :javascript
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+      %p= link_to "Vidipanda Acoount", "http://vidipanda.com/users/#{team.dudupress_username}"
+      %p= link_to "Dudupress Account", "http://#{team.dudupress_username}.dudupress.com"
+      %p= link_to "Facebook", "https://www.facebook.com/#{team.facebook_username}"

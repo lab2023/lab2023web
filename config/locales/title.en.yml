@@ -4,6 +4,7 @@ en:
     edit: "Editing %{resource_name}"
     new: "New %{resource_name}"
     show: Detail
+    sign_in: Signin
     dashboard:
       welcome: Welcome
     profile:
