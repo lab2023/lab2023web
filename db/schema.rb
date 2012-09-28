@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120926113635) do
+ActiveRecord::Schema.define(:version => 20120928105025) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -54,6 +54,18 @@ ActiveRecord::Schema.define(:version => 20120926113635) do
   end
 
   add_index "open_sources", ["slug"], :name => "index_open_sources_on_slug"
+
+  create_table "project_pictures", :force => true do |t|
+    t.integer  "project_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "project_pictures", ["project_id"], :name => "index_project_pictures_on_project_id"
 
   create_table "projects", :force => true do |t|
     t.string   "name"

@@ -1,12 +1,15 @@
 Lab2023web::Application.routes.draw do
 
+
   root :to => 'pages#index'
 
   devise_for :admins, :controllers => { :sessions => "admins/sessions", :registrations =>  "admins/registrations"}
   namespace :admins do
     resources :dashboard
     resources :teams
-    resources :projects
+    resources :projects do
+      resources :project_pictures
+    end
     resources :open_sources
   end
 

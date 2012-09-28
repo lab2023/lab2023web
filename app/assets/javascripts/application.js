@@ -25,4 +25,14 @@ $(document).ready(function() {
         format: 'yyyy-mm-dd'
 
     });
+
 });
+
+function show_picture(url, title) {
+    $("#modal_image").find('img').remove();
+    $("#modal_header").find('p').remove();
+    $("#modal_header").append("<p>"+title+"</p>");
+    $("#modal_image").append("<img src="+url+">");
+
+    $('#myModal').modal('show');
+}

@@ -1,0 +1,3 @@
+%li.span3
+  = link_to image_tag(project_picture.image(:small), :class => 'thumbnail'), "#", :onclick => "show_picture('#{project_picture.image(:large)}', '#{project_picture.project.name}')"
+  = link_to "Delete", admins_project_project_picture_path(project_picture.project, project_picture.id), :class => 'btn', :method => :delete

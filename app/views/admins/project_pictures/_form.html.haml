@@ -1,0 +1,7 @@
+-@project_picture = @project.project_pictures.new
+= simple_form_for([:admins, @project, @project_picture], :html => {:multipart => true}) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :image, :as => :file
+    = f.button :submit
