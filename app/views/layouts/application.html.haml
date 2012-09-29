@@ -38,6 +38,8 @@
               = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
     .container
       = yield
+      .clearfix
+      %hr
       %ul
         %li= link_to "Open Source Projects", open_sources_path
         %li= link_to "Teams", teams_path

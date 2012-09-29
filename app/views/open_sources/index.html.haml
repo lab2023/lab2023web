@@ -1,10 +1,10 @@
 = title t('open_sources')
+//http://plataformatec.com.br/open-source
 
-%ul
+
 - @open_sources.each do |open_source|
-  %li.thumbnail
-    %h4.title= open_source.name
-    %p= open_source.repostory_url
-    %p.info
-      %p= open_source.twitter_username
-      %p= open_source.facebook_page
+  %h3.title= open_source.name
+  %hr
+  = link_to "Documentation", open_source_path(open_source)
+  |
+  = link_to "Github", "https://github.com/#{open_source.repostory_url}"

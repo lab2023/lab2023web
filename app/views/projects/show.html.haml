@@ -1,11 +1,18 @@
 = title t('activerecord.models.project')
 
-%table.table.table-striped.table-bordered.table-condensed
-  %tr
-    %td= image_tag(@project.picture.url)
-    %td= @project.name
-    %td= @project.description
-    %td= @project.website
-    %td= @project.owner
-    %td= @project.twitter_username
-    %td= @project.facebook_page
+%h1= @project.name
+%hr
+%p= @project.description
+=link_to @project.name, @project.website
+
+%ul
+  = render @project.project_pictures
+
+-if @project.owner == 1
+  %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/#{@project.twitter_username}"}= "Follow @#{@project.twitter_username}"
+  :javascript
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  =link_to "Faebook", @project.facebook_page
+
+
+

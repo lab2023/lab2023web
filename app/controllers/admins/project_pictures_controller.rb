@@ -8,7 +8,7 @@ class Admins::ProjectPicturesController < Admins::ApplicationController
 
 
   def create
-    @project_picture = @project.project_pictures.new(params[:project_picture])
+    @project_picture = @project.project_pictures.new(params[:project_pictures])
     @project_picture.save
     respond_with(:admins, @project, @project_picture, :location => admins_project_project_pictures_url(@project))
   end

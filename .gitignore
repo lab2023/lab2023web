@@ -39,3 +39,4 @@ nbproject/**/*
 nbproject
 .idea
 .idea/**/*
+.powrc
