@@ -9,11 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap-datepicker
- *= require_tree . */
+ *= require bootstrap-datepicker */
 
 @import "compass"
 
+// Variables
 $baseFontFamily: "PT Sans", "Helvetica Neue", Arial, sans-serif
 $baseFontSize: 16px // 1.15em
 $baseLineHeight: 28px // 1.5em
@@ -21,11 +21,15 @@ $navbarHeight: 120px
 $baseColor: #1086ce
 
 @import "bootstrap"
+
+// Base
 body
   padding-top: 180px
-  background: #eee url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/furley_bg.png)
+  background: #eee url(furley_bg.png)
 
 @import "bootstrap-responsive"
+
+// Elements
 #logo
   padding: 0
   img
@@ -33,83 +37,68 @@ body
     margin-top: 20px
     margin-left: 20px
 
-div.container, div.container-fluid
-  div.wrapper
-    border: 1px solid rgba(0, 0, 0, 0.35)
-    @include border-radius(5px)
-    @include box-shadow(rgba(0, 0, 0, 0.35) 0 0 20px)
-    background-color: #fff
-
-    div.wrap
-      padding: 20px
-
-      div.head
-        @include border-top-radius(5px)
-        @include background-image(linear-gradient(white, #e1e1e1))
-
-        padding: 0 20px
-        margin: -10px -20px 20px -20px
-        min-height: 45px
-        border-bottom: 1px solid #cdcdcd
-        position: relative
-        background-color: #e1e1e1
-        background-repeat: repeat-x
-
-        div.pull-left
-          h2
-            padding: 5px 0 0 0
-            line-height: 24px
-
-        div.title
-          text-align: center
-
-        div.pull-right
-          padding-top: 5px
-          text-align: right
-
-    div.form-actions
-      margin-left: -20px
-      margin-right: -20px
-      margin-bottom: -36px
-
-  div.soft-wrapper
-    @extend div.wrapper
-    margin: auto
-    width: 500px
-
-header
-  #mini-nav
-    background: $grayDark url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/subtle_carbon.png)
-    .container
-      ul
-        @media (max-width: 979px)
-          text-align: center
-        text-align: right
+#mini-nav
+  background: $grayDark url(low_contrast_linen.png)
+  .container
+    ul
+      @media (max-width: 979px)
+        text-align: center
+      text-align: right
+      float: none
+      li
         float: none
-        li
-          float: none
-          display: inline-block
-          margin: 0 20px 0 0
-          a
-            padding: 0
-            text-shadow: none
-            font-size: 80%
-            color:  $grayLight
-            &:hover
-              color: $grayLighter !important
-  //border-top: 4px solid $baseColor
-  #main-nav
-    a
-      font-size: 130%
-
-.text-center
-  text-align: center
+        display: inline-block
+        margin: 0 20px 0 0
+        a
+          padding: 0
+          text-shadow: none
+          font-size: 80%
+          color:  $grayLight
+          &:hover
+            color: $grayLighter !important
+//border-top: 4px solid $baseColor
+#main-nav
+  a
+    font-size: 130%
 
 #home-hero
-  font-size: 75px
+  font-size: 55px
   font-weight: 800
   letter-spacing: 2px
-  line-height: 85px
+  line-height: 55px
   color:  $grayDark
   strong
     color: #000
+
+ul#projects
+  margin-top: 50px
+  text-align: center
+  li
+    cursor: pointer
+    display: inline-block
+    float: none
+    .wrapper
+      position: relative
+      z-index: 1
+      height: 250px
+      overflow: hidden
+      .info
+        display: none
+        position: absolute
+        z-index: 0
+        width: 250px
+        height: 250px
+        margin-top: -250px
+        background-color: #222
+        color: #fff
+        @include opacity(.9)
+    &:hover
+      @include box-shadow(lighten($baseColor, 30) 0 0 15px)
+      .wrapper
+        img
+          @include opacity(.9)
+
+// Classes
+.text-center
+  text-align: center
+

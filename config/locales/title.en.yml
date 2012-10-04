@@ -6,6 +6,7 @@ en:
     show: Detail
     sign_in: Signin
     dashboard:
+      title: Dashboard
       welcome: Welcome
     profile:
       show: Profile

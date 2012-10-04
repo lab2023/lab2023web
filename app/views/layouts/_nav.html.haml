@@ -1,0 +1,23 @@
+#mini-nav
+  .container
+    %ul.nav
+      %li=link_to "Github", "#"
+      %li=link_to "Facebook", "#"
+      %li=link_to "Twitter", "#"
+      %li=link_to "Blog", "#"
+      %li=link_to "Concat", "#"
+%nav#main-nav.navbar-inner
+  .container
+    %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a#logo.brand{:href => root_url}
+      = image_tag "logo.png"
+    .nav-collapse
+      %ul.nav.pull-right
+        %li= link_to "Home", root_path
+        %li= link_to "About", root_path(:anchor => "about")
+        %li= link_to "Works", projects_url
+        %li= link_to "Open Source", open_sources_path
+        %li= link_to "Team", teams_path

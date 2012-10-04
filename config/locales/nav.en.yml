@@ -1,5 +1,8 @@
 en:
   nav:
     dashboard: Dashboard
+    projects: Projects
+    teams: Teams
+    open_source: Open Source
     profile: Profile
     signout: Sign Out

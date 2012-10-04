@@ -11,16 +11,13 @@
     %i.icon-pencil
     Edit Pictures
 
-
 = show_for @project do |s|
+  = image_tag @project.cover(:small), :class => "thumbnail  pull-right"
   = s.attribute :name
   = s.attribute :description
   = s.attribute :website
   = s.attribute :owner
   = s.attribute :twitter_username
   = s.attribute :facebook_page
-
-%ul
-  = render @project.project_pictures
 
 = render :partial => "admins/modal"

@@ -1,0 +1,35 @@
+%nav.navbar-inner
+  %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+    %span.icon-bar
+    %span.icon-bar
+    %span.icon-bar
+  %a.brand{:href => "/"}
+    lab2023 - Administration
+  .nav-collapse
+    %ul.nav
+      %li
+        = link_to admins_dashboard_index_path do
+          %i.icon-home
+          =t('nav.dashboard')
+      %li
+        = link_to(admins_teams_path) do
+          %i.icon-user
+          =t('nav.teams')
+      %li
+        = link_to(admins_projects_path) do
+          %i.icon-briefcase
+          =t('nav.projects')
+      %li
+        = link_to(admins_open_sources_path) do
+          %i.icon-globe
+          =t('nav.open_source')
+
+    %ul.nav.pull-right
+      %li.dropdown
+        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+          %i.icon-user
+          = current_admin.name
+          %b.caret
+        %ul.dropdown-menu
+          %li= link_to t('nav.profile'), edit_admin_registration_path
+          %li= link_to t('nav.signout'), destroy_admin_session_path, :method => :delete

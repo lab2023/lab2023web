@@ -1,0 +1,20 @@
+= title t('tt.dashboard.title')
+
+.row-fluid
+  .span12
+    %p
+      Welcome to lab2023 - internet technologies administration area.
+
+.row-fluid
+  .span4
+    = link_to admins_teams_path, :class => "btn dashboard-btn btn-large" do
+      %i.icon-user
+      =t('nav.teams')
+  .span4
+    = link_to admins_projects_path, :class => "btn dashboard-btn btn-large" do
+      %i.icon-briefcase
+      =t('nav.projects')
+  .span4
+    = link_to admins_open_sources_path, :class => "btn dashboard-btn btn-large" do
+      %i.icon-globe
+      =t('nav.open_source')

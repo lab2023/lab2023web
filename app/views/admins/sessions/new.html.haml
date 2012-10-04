@@ -1,6 +1,6 @@
-%h2
-  = t('devise.sessions.new_admin.title')
-= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+- title t('devise.sessions.new_admin.title')
+
+= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :defaults => {:input_html => {:class => "span12"}}) do |f|
   .inputs
     = f.input :email, :required => false, :autofocus => true
     = f.input :password, :required => false

@@ -1,4 +1,4 @@
-!!!
+!!!5
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}/
@@ -13,44 +13,12 @@
     = csrf_meta_tags
     = yield :head
   %body
-    %header.navbar.navbar-fixed-top
-      #mini-nav
-        .container
-          %ul.nav
-            %li=link_to "Github", "#"
-            %li=link_to "Facebook", "#"
-            %li=link_to "Twitter", "#"
-            %li=link_to "Blog", "#"
-            %li=link_to "Concat", "#"
-      %nav#main-nav.navbar-inner
-        .container
-          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a#logo.brand{:href => root_url}
-            = image_tag "logo.png"
-          .nav-collapse
-            %ul.nav.pull-right
-              %li= link_to "Home", root_path
-              %li= link_to "About", open_sources_path
-              %li= link_to "Works", projects_url
-              %li= link_to "Open Source", open_sources_path
-              %li= link_to "Team", teams_path
-
-
-    - if flash.count > 0
-      .container
-        .row-fluid
-          - flash.each do |name, msg|
-            %div{:class => "alert alert-#{name}"}
-              %a.close{"data-dismiss" => "alert", :href => "#"} &times;
-              = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
+    / Navbar
+    %header#header.navbar.navbar-fixed-top
+      = render :partial => "layouts/nav"
+    / Messages
     .container
+      = render :partial => "layouts/shared/messages"
+    / Contents
+    #contents.container
       = yield
-      .clearfix
-      %hr
-      %ul
-        %li= link_to "Open Source Projects", open_sources_path
-        %li= link_to "Teams", teams_path
-        %li= link_to "Projects", projects_url
