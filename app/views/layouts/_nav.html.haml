@@ -1,10 +1,10 @@
 #mini-nav.dark-bg
   .container
     %ul.nav
-      %li=link_to "Github", "#"
-      %li=link_to "Facebook", "#"
-      %li=link_to "Twitter", "#"
-      %li=link_to "Blog", "#"
+      %li=link_to "Github", "http://www.github.com/lab2023", :target => "_blank"
+      %li=link_to "Facebook", "http://www.facebook.com/lab2023" , :target => "_blank"
+      %li=link_to "Twitter", "http://www.twitter.com/lab2023", :target => "_blank"
+      %li=link_to "Blog", "http://blog.lab2023.com"
       %li=link_to "Concat", "#"
 %nav#main-nav.navbar-inner
   .container
@@ -17,6 +17,6 @@
     .nav-collapse
       %ul.nav.pull-right
         %li= link_to "Home", root_path
-        %li= link_to "Team", teams_path
-        %li= link_to "Works", projects_url
+        %li= link_to "Team", team_path
+        %li= link_to "Works", works_path
         %li= link_to "Open Source", open_sources_path
