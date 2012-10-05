@@ -1,24 +1,33 @@
-= title t('teams')
+= title t('nav.team_extra')
 
-- @teams.each do |team|
-  .row-fluid
-    .span3
-      .thumbnail
-        = image_tag(team.avatar.url)
-    .span9
+- content_for :hero_description do
+  "Big things, important undertakings are possible with joint efforts." - Mustafa Kemal ATATÜRK
 
-      %h4= team.name
-      %p
-        %i= team.position
-      %p= team.description
-      %p
-        %i.icon-envelope
-        = team.mail
-      %iframe{:allowtransparency => "true", :frameborder => "0", :height => "20px", :scrolling => "0", :src => "http://ghbtns.com/github-btn.html?user=#{team.github_username}&type=follow"}
-      %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/#{team.twitter_username}"}= "Follow @#{team.twitter_username}"
-      :javascript
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-      %p= link_to "Vidipanda Acoount", "http://vidipanda.com/users/#{team.dudupress_username}"
-      %p= link_to "Dudupress Account", "http://#{team.dudupress_username}.dudupress.com"
-      %p= link_to "Facebook", "https://www.facebook.com/#{team.facebook_username}"
+%ul#team.centered.thumbnails
+  - @teams.each do |team|
+    %li
+      .well
+        .row-fluid.picture-social
+          .span4.text-center
+            = image_tag team.avatar.url(:medium), :class => "thumbnail"
+            %p.hidden
+              %br/
+              = link_to "Github", "https://www.github.com/#{team.github_username}", :target => "_blank"
+              %br/
+              = link_to "Facebook", "https://www.facebook.com/#{team.facebook_username}", :target => "_blank"
+              %br/
+              = link_to "Twitter", "https://twitter.com/#{team.twitter_username}", :target => "_blank"
+              %br/
+              = link_to "Vidipanda Acoount", "http://vidipanda.com/users/#{team.vidipanda_username}", :target => "_blank"
+              %br/
+              = link_to "Dudupress Account", "http://#{team.dudupress_username}.dudupress.com", :target => "_blank"
+          .span8.info
+            %h2= team.name
+            %p
+              %i.icon-briefcase
+              = team.position
+              %br/
+              %i.icon-envelope
+              = mail_to team.email
+            %p.description
+              = team.description

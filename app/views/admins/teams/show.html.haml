@@ -8,17 +8,15 @@
   = link_to(admins_team_path(@team), class: 'btn', confirm: t('confirm'), method: :delete, rel: 'tooltip', title: t('tooltips.delete')) do
     %i.icon-trash
 
+.thumbnail.pull-right
+  = image_tag(@team.avatar.url(:small))
 = show_for @team do |s|
-  .row-fluid
-    .span4
-      = s.attribute :name
-      = s.attribute :description
-      = s.attribute :mail
-      = s.attribute :github_username
-      = s.attribute :vidipanda_username
-      = s.attribute :dudupress_username
-      = s.attribute :twitter_username
-      = s.attribute :facebook_username
-    .span8
-      .thumbnail.span3
-        = image_tag(@team.avatar.url)
+  = s.attribute :name
+  = s.attribute :description
+  = s.attribute :email
+  = s.attribute :github_username
+  = s.attribute :vidipanda_username
+  = s.attribute :dudupress_username
+  = s.attribute :twitter_username
+  = s.attribute :facebook_username
+

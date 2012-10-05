@@ -17,15 +17,14 @@
 $baseFontFamily: "PT Sans", "Helvetica Neue", Arial, sans-serif
 $baseFontSize: 16px // 1.15em
 $baseLineHeight: 28px // 1.5em
-$navbarHeight: 120px
+$navbarHeight: 121px
 $baseColor: #1086ce
 
 @import "bootstrap"
 
 // Base
 body
-  padding-top: 180px
-  background: #eee url(furley_bg.png)
+  padding-top: 150px
 
 @import "bootstrap-responsive"
 
@@ -37,46 +36,52 @@ body
     margin-top: 20px
     margin-left: 20px
 
-#mini-nav
-  background: $grayDark url(low_contrast_linen.png)
-  .container
-    ul
-      @media (max-width: 979px)
-        text-align: center
-      text-align: right
-      float: none
-      li
+#header
+  #mini-nav
+    .container
+      ul
+        @media (max-width: 979px)
+          text-align: center
+        text-align: right
         float: none
-        display: inline-block
-        margin: 0 20px 0 0
-        a
-          padding: 0
-          text-shadow: none
-          font-size: 80%
-          color:  $grayLight
-          &:hover
-            color: $grayLighter !important
-//border-top: 4px solid $baseColor
-#main-nav
-  a
-    font-size: 130%
+        li
+          float: none
+          display: inline-block
+          margin: 0 20px 0 0
+          a
+            padding: 0
+            text-shadow: none
+            font-size: 80%
+            color:  $grayLight
+            &:hover
+              color: $grayLighter !important
+  //border-top: 4px solid $baseColor
+  #main-nav
+    a
+      font-size: 130%
 
-#home-hero
-  font-size: 55px
-  font-weight: 800
-  letter-spacing: 2px
-  line-height: 55px
-  color:  $grayDark
-  strong
-    color: #000
+#hero-unit
+  text-align: center
+  padding: 40px 0
+  h1
+    font-size: 50px
+    margin: 0 0 10px 0
+  .description
+    font-family: "Helvetica Neue"
+    letter-spacing: 1px
+    .bigger
+      font-weight: 800
+      font-size: 50px
+      letter-spacing: 2px
+      line-height: 60px
+    font-size: 25px
+    font-weight: 400
+    strong
+      color: #000
 
 ul#projects
-  margin-top: 50px
-  text-align: center
   li
     cursor: pointer
-    display: inline-block
-    float: none
     .wrapper
       position: relative
       z-index: 1
@@ -98,7 +103,118 @@ ul#projects
         img
           @include opacity(.9)
 
+ul#team
+  li
+    width: 47.744%
+    .well
+      min-height: 300px
+    .info
+      padding-left: 10px
+      h2
+        margin: 0
+      text-align: left
+      .description
+        line-height: 25px
+ul.centered
+  text-align: center
+  margin:  0
+  padding:  0
+  li
+    margin: 10px
+    display: inline-block
+    float: none
+
+#contents
+  margin-top: 10px
+
+#footer, footer
+  font-size: 95%
+  color: $grayLighter
+  margin-top: 20px
+  padding: 60px 0 30px 0
+  height: 100%
+  border-top: 1px solid #000
+  .small
+    margin-top: 40px
+    font-size: 80%
+  a
+    color: $grayLight
+    &:hover
+      color: $grayLighter
+
 // Classes
+.light-bg
+  background: $grayLight url(furley_bg.png)
+.dark-bg
+  background: $grayDark url(low_contrast_linen.png)
 .text-center
   text-align: center
+.text-right
+  text-align: right
+
+// Responsive
+@media (max-width: 340px)
+  #header
+    #mini-nav
+      .container
+        ul
+          li
+            margin: 0 10px 0 0
+  #logo
+    img
+      width: 218px
+      margin-top: 27px
+      margin-left: 10px
+  #hero-unit
+    h1
+      font-size: 30px
+    .description
+      font-size: 17px
+  ul#team
+    li
+      width: 93% !important
+      .info
+        h2
+          font-size: 23px
+        font-size: 83%
+  #hero-unit
+    padding: 0 !important
+  #footer
+    padding: 20px
+    font-size: 80%
+    .small
+      text-align: center
+
+@media (min-width: 340px) and (max-width: 767px)
+
+  #hero-unit, #footer
+    margin-left: -20px
+    margin-right: -20px
+  ul#team
+    li
+      width: 98%
+
+@media (min-width: 767px) and  (max-width: 979px)
+  ul#team
+    li
+      width: 98%
+      .well
+        min-height: 255px
+  #header
+    margin-bottom: 0
+    #mini-nav
+      .container
+        ul
+          text-align: center
+
+@media (max-width: 979px)
+  #hero-unit, #footer
+    padding: 50px
+
+@media (min-width: 979px) and (max-width: 1280px)
+  ul#team
+    li
+      width: 46.744%
+      .well
+        min-height: 415px
 

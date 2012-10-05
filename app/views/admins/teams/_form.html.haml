@@ -1,15 +1,19 @@
 = simple_form_for([:admins, @team], :defaults => {:input_html => {:class => 'span12'}}) do |f|
   = f.error_notification
-  .row-fluid
-    .span6.well
-      .form-inputs
-        = f.input :name
-        = f.input :position
-        = f.input :description, :input_html => {:rows => 3}
-        = f.input :avatar
-    .span6.well
-      .form-inputs
-        = f.input :mail
+  .form-inputs
+    .row-fluid
+      .span8.well
+        .row-fluid
+          .span9
+            = f.input :name
+            = f.input :position
+            = f.input :email
+          .span3.thumbnail
+            = image_tag(@team.avatar.url(:small))
+            = f.input :avatar
+          .clearfix
+          = f.input :description, :input_html => {:rows => 3}
+      .span4.well
         = f.input :github_username
         = f.input :vidipanda_username
         = f.input :dudupress_username
@@ -17,5 +21,4 @@
         = f.input :facebook_username
 
   .form-actions
-    .pull-right
-      = f.button :submit
+    = f.button :submit

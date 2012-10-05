@@ -8,15 +8,15 @@
 
 %table.table.table-striped.table-bordered.table-condensed
   %tr
-    %th
-      = t('activerecord.attributes.team.name')
-    %th
-      = t('activerecord.attributes.team.mail')
+    %th= t('activerecord.attributes.team.name')
+    %th= t('activerecord.attributes.team.position')
+    %th= t('activerecord.attributes.team.email')
     %th{:width => "140px"}
   - @teams.each do |team|
     %tr
       %td= team.name
-      %td= team.mail
+      %td= team.position
+      %td= team.email
       %td
         = link_to(admins_team_path(team), class: 'btn', rel: 'tooltip', title: t('tooltips.show')) do
           %i.icon-eye-open

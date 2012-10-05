@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121004131201) do
+ActiveRecord::Schema.define(:version => 20121005085303) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(:version => 20121004131201) do
     t.string   "position"
     t.string   "avatar"
     t.text     "description"
-    t.string   "mail"
+    t.string   "email"
     t.string   "github_username"
     t.string   "dudupress_username"
     t.string   "vidipanda_username"

@@ -1,6 +1,7 @@
-= title t('open_sources')
-//http://plataformatec.com.br/open-source
+= title t('nav.open_source_extra')
 
+- content_for :hero_description do
+  We believe in collaboration, that's why we contribute to open source software communities.
 
 - @open_sources.each do |open_source|
   %h3.title= open_source.name

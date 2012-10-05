@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   belongs_to :role
 
   has_attached_file :avatar,
-                    :default_url => "/assets/default-avatar.gif",
+                    :default_url => "/assets/missing-image.jpg",
                     :styles => {
                         :small => "120x120#",
                     }

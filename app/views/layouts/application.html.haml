@@ -12,7 +12,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     = yield :head
-  %body
+  %body.light-bg
     / Navbar
     %header#header.navbar.navbar-fixed-top
       = render :partial => "layouts/nav"
@@ -20,5 +20,11 @@
     .container
       = render :partial => "layouts/shared/messages"
     / Contents
+    #hero-unit
+      .container
+        %h1= yield :hero_title
+        .description= yield :hero_description
     #contents.container
       = yield
+    %footer#footer.dark-bg
+      = render "layouts/shared/footer"

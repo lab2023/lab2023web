@@ -1,8 +1,11 @@
 en:
   nav:
     dashboard: Dashboard
-    projects: Projects
+    projects: Works
+    projects_extra: Works & Projects
     teams: Teams
+    team_extra: Our Development Team
     open_source: Open Source
+    open_source_extra: Open Source Projects
     profile: Profile
     signout: Sign Out
