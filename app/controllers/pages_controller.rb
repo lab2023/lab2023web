@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @projects = Project.limit(4).order("id DESC")
+    @projects = Project.limit(4).order("id ASC")
   end
 
   def contact
