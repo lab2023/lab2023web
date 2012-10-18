@@ -4,7 +4,6 @@ require "bundler/capistrano"
 
 server "127.0.0.1", :web, :app, :db, primary: true
 
-
 set :application, "lab2023"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
@@ -13,7 +12,7 @@ set :use_sudo, false
 set :bundle_cmd, '/home/deployer/.rvm/gems/ruby-1.9.3-p194@global/bin/bundle'
 
 set :scm, "git"
-set :repository, "git@github.com:lab2023/#{application}.git"
+set :repository, "git@github.com:lab2023/#{application}web.git"
 set :branch, "master"
 
 default_run_options[:pty] = true
