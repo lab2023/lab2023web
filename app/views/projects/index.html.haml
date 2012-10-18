@@ -1,4 +1,13 @@
 =title t('nav.projects_extra')
 
-%ul
-  = render @projects
+%hr.divider
+
+.text-center.hero
+  %h1= t('nav.projects_extra')
+  "We always understand you and always provide solutions."
+
+%hr.divider
+
+#works.text-center.row-fluid
+  .span12
+    = render @projects

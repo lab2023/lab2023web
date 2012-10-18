@@ -1,33 +1,12 @@
 = title t('nav.team_extra')
 
-- content_for :hero_description do
+%hr.divider
+
+.text-center.hero
+  %h1= t('nav.team_extra')
   "Big things, important undertakings are possible with joint efforts." - Mustafa Kemal ATATÜRK
 
+%hr.divider
+
 %ul#team.centered.thumbnails
-  - @teams.each do |team|
-    %li
-      .well
-        .row-fluid.picture-social
-          .span4.text-center
-            = image_tag team.avatar.url(:medium), :class => "thumbnail"
-            %p.hidden
-              %br/
-              = link_to "Github", "https://www.github.com/#{team.github_username}", :target => "_blank"
-              %br/
-              = link_to "Facebook", "https://www.facebook.com/#{team.facebook_username}", :target => "_blank"
-              %br/
-              = link_to "Twitter", "https://twitter.com/#{team.twitter_username}", :target => "_blank"
-              %br/
-              = link_to "Vidipanda Acoount", "http://vidipanda.com/users/#{team.vidipanda_username}", :target => "_blank"
-              %br/
-              = link_to "Dudupress Account", "http://#{team.dudupress_username}.dudupress.com", :target => "_blank"
-          .span8.info
-            %h2= team.name
-            %p
-              %i.icon-briefcase
-              = team.position
-              %br/
-              %i.icon-envelope
-              = mail_to team.email
-            %p.description
-              = team.description
+  = render @teams

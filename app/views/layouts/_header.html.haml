@@ -1,0 +1,16 @@
+.row
+  .span4
+    %ul#left-nav.nav.pull-right.text-right
+      %li=link_to t('nav.home'), root_path
+      %li=link_to t('nav.projects'), projects_path
+      %li=link_to t('nav.open_source'), "http://www.github.com/lab2023", :target => "_blank"
+  .span4.text-center
+    %a#logo.gray-linear-gradient{:href => root_path}
+      =image_tag "logo.png"
+      %h1 lab2023
+      %h2.color internet technologies
+    %i#slogan.gray "Simple is perfect"
+  .span4
+    %ul#right-nav.nav.pull-left.text-left
+      %li=link_to t('nav.team_extra'), teams_path
+      %li=link_to t('nav.contact'), "/contact"

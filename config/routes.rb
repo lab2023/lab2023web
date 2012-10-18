@@ -1,11 +1,6 @@
 Lab2023web::Application.routes.draw do
-
-
+  
   root :to => 'pages#index'
-
-  match "/works" => "projects#index", :as => :works_path
-  match "/team" => "teams#index", :as => :team_path
-  match "/contact" => "pages#contact", :as => :contact_path
 
   devise_for :admins, :controllers => { :sessions => "admins/sessions", :registrations =>  "admins/registrations"}
   namespace :admins do
@@ -20,6 +15,9 @@ Lab2023web::Application.routes.draw do
   resources :teams, :only => [:index]
   resources :projects, :only => [:index, :show]
   resources :open_sources, :only => [:index, :show]
+  resources :pages, :only => [:index, :contact]
+
+  match "/contact" => "pages#contact"
 
   devise_for :users
 end

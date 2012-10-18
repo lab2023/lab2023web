@@ -1,0 +1,33 @@
+.container
+  .row-fluid
+    .span2
+      %h4 Our Company
+      %ul
+        %li=link_to "Meet the team", teams_path
+        %li=link_to "Our works", projects_path
+        %li=link_to "Concat us", "/contacts"
+    .span3
+      %h4 Community & Open Source
+      %ul
+        %li=link_to "Kebab Project", "http://www.github.com/kebab-project", :target => "_blank"
+        %li=link_to "Dudupress", "http://www.github.com/lab2023/dudupress", :target => "_blank"
+        %li=link_to "Rails Templates", "http://www.github.com/lab2023/rails-template", :target => "_blank"
+      %small=link_to "See all open source projects →", "http://www.github.com/lab2023", :target => "_blank"
+    .span5
+      %h4 Contact US
+      %address
+        Pamukkale University Research Area Z-13 Kinikli - Denizli / Turkey
+        %br/
+        +90 258 215 5010
+        %br/
+        =mail_to "info@lab2023.com"
+    .span2
+      %h4 Follow us
+      %ul
+        %li=link_to "Github", "http://www.github.com/lab2023", :target => "_blank"
+        %li=link_to "Facebook", "http://www.facebook.com/lab2023" , :target => "_blank"
+        %li=link_to "Twitter", "http://www.twitter.com/lab2023", :target => "_blank"
+  .row-fluid.small
+
+    .span12.text-center
+      Copyright &copy; 2012, 2013 - lab2023 - internet technologies - All rights reserved.

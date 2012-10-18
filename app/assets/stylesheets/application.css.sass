@@ -14,123 +14,183 @@
 @import "compass"
 
 // Variables
-$baseFontFamily: "PT Sans", "Helvetica Neue", Arial, sans-serif
-$baseFontSize: 16px // 1.15em
-$baseLineHeight: 28px // 1.5em
+$baseFontFamily: "Open Sans Condensed", "Helvetica Neue", Arial, sans-serif
+$baseFontSize: 25px // 1.15em
+$baseLineHeight: 35px // 1.5em
 $navbarHeight: 121px
-$baseColor: #1086ce
+$baseColor: #31739d
+$highlightColor: #F4EBD2
 
 @import "bootstrap"
 
 // Base
 body
-  padding-top: 150px
+  background: $grayDark url(furley_bg.png)
+
+::selection
+  background-color: $highlightColor
 
 @import "bootstrap-responsive"
 
-// Elements
-#logo
-  padding: 0
-  img
-    width: 250px
-    margin-top: 20px
-    margin-left: 20px
+h1, h2, h3, h4, h5, h6
+  font-weight: 700
+  //@include text-shadow(-1px -1px 1px black)
+  margin: 5px 0px
+  padding: 5px 0px
 
-#header
-  #mini-nav
-    .container
-      ul
-        @media (max-width: 979px)
-          text-align: center
-        text-align: right
-        float: none
-        li
-          float: none
-          display: inline-block
-          margin: 0 20px 0 0
-          a
-            padding: 0
-            text-shadow: none
-            font-size: 80%
-            color:  $grayLight
-            &:hover
-              color: $grayLighter !important
-  //border-top: 4px solid $baseColor
-  #main-nav
-    a
-      font-size: 130%
+hr
+  margin: 20px 0
 
-#hero-unit
+// Classes
+.text-center
   text-align: center
-  padding: 40px 0
-  h1
-    font-size: 50px
-    margin: 0 0 10px 0
-  .description
-    font-family: "Helvetica Neue"
-    letter-spacing: 1px
-    .bigger
-      font-weight: 800
-      font-size: 50px
-      letter-spacing: 2px
-      line-height: 60px
-    font-size: 25px
-    font-weight: 400
-    strong
-      color: #000
 
-ul#projects
-  li
+.text-right
+  text-align: right
+
+.gray
+  color: $grayLight
+.color
+  color: $baseColor
+
+.small
+  font-size: 70%
+
+.gray-linear-gradient
+  +background-image(linear-gradient(#fff, #d1d1d1))
+  &:hover
+    +background-image(linear-gradient(#d1d1d1, #fff))
+
+.hero
+  margin-top: -10px
+  font-size: 140%
+
+hr.divider
+  border: 0
+  background: url(divider.png) no-repeat center
+  height: 15px
+  margin: 30px auto
+
+// Elements
+#header
+  border-top: 5px solid $baseColor
+  padding-top: 20px
+  ul.nav
+    text-align: center
+    margin-top: 60px
+    li
+      float: none
+      display: inline-block
+      margin: 10px
+      a
+        font-weight: 800
+
+  i#slogan
+    margin-bottom: -20px
+    display: block
+    font-size:  60%
+  #logo
     cursor: pointer
-    .wrapper
-      position: relative
-      z-index: 1
-      height: 250px
-      overflow: hidden
-      .info
-        display: none
-        position: absolute
-        z-index: 0
-        width: 250px
-        height: 250px
-        margin-top: -250px
-        background-color: #222
-        color: #fff
-        @include opacity(.9)
+    background-color: #d1d1d1
+    display: inline-block
+    height: 148px
+    width: 148px
+    text-align: center
+    padding:  5px
+    +border-radius(100px)
+    +box-shadow(0px 4px 0px darken($baseColor, 20))
+    border: 6px solid $baseColor
+    color: $black
     &:hover
-      @include box-shadow(lighten($baseColor, 30) 0 0 15px)
-      .wrapper
-        img
-          @include opacity(.9)
+      text-decoration: none
+    img
+      height: 105px
+    h1
+      font-size: 25px
+      margin-top: 0
+      padding: 0
+      line-height: 24px
+    h2
+      font-size: 10px
+      margin: 0
+      padding: 0
+      line-height: 0
+
+#hero
+  text-align: center
+  h1
+    margin-top: -10px
+    font-size: 70px
+    line-height: 65px
+    text-transform: uppercase
+  h2
+    font-size: 45px
+    line-height: 50px
+    text-transform: uppercase
+
+#what-we-do
+  text-align: center
+  a.rounded
+    background-color: lighten($baseColor, 8)
+    +border-radius(50px)
+    margin: 5px
+    display: inline-block
+    border: 5px solid $highlightColor
+    line-height: 40px
+    height: 45px
+    width: 250px
+    font-size: 23px
+    color: white
+    padding-top: 2px
+    letter-spacing: 1px
+    &:hover
+      text-decoration: none
+      border: 5px solid darken($highlightColor, 10)
+
+#works
+  margin-top: 10px
+  .thumbnail
+    background-color: white
+    display: inline-block
+    margin: 10px
+    width: 250px
+    line-height: 10px
+    &:hover
+      @include box-shadow(lighten($yellow, 30) 0 0 15px)
+      img
+        @include opacity(.9)
+    h3
+      margin: 0
+      line-height: 30px
+      padding: 0
+    a
+      line-height: 30px
+      font-size: 75%
+
+#what-we-do-details
+  .well
+    font-size: 85%
+    line-height: 30px
+    text-align: center
+    min-height: 360px
 
 ul#team
   li
-    width: 47.744%
-    .well
-      min-height: 300px
     .info
-      padding-left: 10px
-      h2
-        margin: 0
-      text-align: left
-      .description
-        line-height: 25px
-ul.centered
-  text-align: center
-  margin:  0
-  padding:  0
-  li
-    margin: 10px
-    display: inline-block
-    float: none
-
-#contents
-  margin-top: 10px
+      font-size: 75%
+      line-height: 25px
+    p.contact
+      font-size: 90%
+      i
+        margin-top: 5px
 
 #footer, footer
-  font-size: 95%
+  *
+    line-height: 25px
+  background: url(low_contrast_linen.png)
+  font-size: 75%
   color: $grayLighter
-  margin-top: 20px
+  margin-top: 40px
   padding: 60px 0 30px 0
   height: 100%
   border-top: 1px solid #000
@@ -141,83 +201,3 @@ ul.centered
     color: $grayLight
     &:hover
       color: $grayLighter
-
-#principles
-  .well
-    min-height: 390px
-// Classes
-.light-bg
-  background: $grayLight url(furley_bg.png)
-.dark-bg
-  background: $grayDark url(low_contrast_linen.png)
-.text-center
-  text-align: center
-.text-right
-  text-align: right
-
-// Responsive
-@media (max-width: 340px)
-  #header
-    #mini-nav
-      .container
-        ul
-          li
-            margin: 0 10px 0 0
-  #logo
-    img
-      width: 218px
-      margin-top: 27px
-      margin-left: 10px
-  #hero-unit
-    h1
-      font-size: 30px
-    .description
-      font-size: 17px
-  ul#team
-    li
-      width: 93% !important
-      .info
-        h2
-          font-size: 23px
-        font-size: 83%
-  #hero-unit
-    padding: 0 !important
-  #footer
-    padding: 20px
-    font-size: 80%
-    .small
-      text-align: center
-
-@media (min-width: 340px) and (max-width: 767px)
-
-  #hero-unit, #footer
-    margin-left: -20px
-    margin-right: -20px
-  ul#team
-    li
-      width: 98%
-
-@media (min-width: 767px) and  (max-width: 979px)
-  ul#team
-    li
-      width: 98%
-      .well
-        min-height: 255px
-  #header
-    margin-bottom: 0
-    #mini-nav
-      .container
-        ul
-          text-align: center
-
-@media (max-width: 979px)
-  #hero-unit, #footer
-    padding: 50px
-
-@media (min-width: 979px) and (max-width: 1280px)
-  ul#team
-    li
-      width: 46.744%
-      .well
-        min-height: 415px
-

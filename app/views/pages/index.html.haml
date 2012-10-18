@@ -1,80 +1,62 @@
-- content_for :hero_description do
-  .text-center.bigger
-    We are build
-    %strong web & mobile apps
-    using ruby, ruby on rails, html5, css3 and javascript
 
-%ul#projects.centered.row.thumbnails
-  %li.thumbnail
-    .wrapper
-      =image_tag "http://placekitten.com/250/250"
-  %li.thumbnail
-    .wrapper
-      =image_tag "http://placekitten.com/g/250/250"
-  %li.thumbnail
-    .wrapper
-      =image_tag "http://placekitten.com/250/250"
-  %li.thumbnail
-    .wrapper
-      =image_tag "http://placekitten.com/g/250/250"
+%hr.divider
+#hero.row
+  .span12
+    %h1
+      We build web
+      %span.color &
+      mobile applications
+    / %h2.color Welcome to lab2023 - internet technologies
+    %p We are Open Source fans. We using Ruby, Ruby On Rails, HTML5, CSS3, JavaScript and many cool technologies.
+#what-we-do
+  =link_to "SAAS Services", root_path(:anchor => "what-we-do-details"), :class => "rounded"
+  =link_to "Consulting & Training", root_path(:anchor => "what-we-do-details"), :class => "rounded"
+  =link_to "Open Source", root_path(:anchor => "what-we-do-details"), :class => "rounded"
 
-%hr/
+%hr.divider
 
-%h1.text-center
-  %a{:name => "principles"}Our Principles
-#principles.row-fluid
+%a{:name => "works"}
+#works.text-center.row-fluid
+  .span12
+    = render @projects
+
+%hr.divider
+
+%a{:name => "what-we-do-details"}
+#what-we-do-details.row-fluid
   .span4
     .well
-      %h2 Development
+      =image_tag "saas-services.png", :width => 150, :height => 129
+      %h3 SAAS Services
       %p
-        We believe that software lives. If you want to have a maintainable, flexible, easy to develop software, you should be agile.
-      %ul.nav
-        %li
-          %i.icon-ok
-          SIP – Simple is perfect.
-        %li
-          %i.icon-ok
-          DRY – Don’t repeat your self.
-        %li
-          %i.icon-ok
-          KISS – Keep it simple stupid.
-        %li
-          %i.icon-ok
-          LIM – Less is more.
-        %li
-          %i.icon-ok
-          YAGNI – You ain’t gonna need it
+        We develop Saas services which are easy to use, clean and simple.
+        Some of them are
+        #{link_to "dudupress.com", "htp://www.dudupress.com", :target => "_blank"},
+        #{link_to "antdesk.com", "htp://www.antdesk.com", :target => "_blank"},
+        #{link_to "vidipanda.com", "htp://www.vidipanda.com", :target => "_blank"},
+        #{link_to "atunut.com", "htp://www.atunut.com", :target => "_blank"},
+        #{link_to "coninja.com", "htp://www.coninja.com", :target => "_blank"}
   .span4
     .well
-      %h2 Agile
+      =image_tag "consulting-and-training.png", :width => 150, :height => 129
+      %h3 Consulting & Training
       %p
-        We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
-      %ul.nav
-        %li
-          %i.icon-ok
-          Individuals and interactions over processes and tools.
-        %li
-          %i.icon-ok
-          Working software over comprehensive documentation.
-        %li
-          %i.icon-ok
-          Customer collaboration over contract negotiation.
-        %li
-          %i.icon-ok
-          Responding to change over following a plan.
+        We offer the full range of development consultancy services. Services we offer are strategy,
+        planning and new development, rails fronted engineering,
+        project rescue, code audit, deployment architecture consultancy.
   .span4
     .well
-      %h2 Business
+      =image_tag "open-source.png", :width => 150, :height => 129
+      %h3 Open Source
       %p
-        We try to make clarity business. Our prices, services, offers are on our web sites and same no matter you are are.
-      %ul.nav
-        %li
-          %i.icon-ok
-          Fixed price for everyone. You can see the prices on our web site and the same no matter who you are.
-        %li
-          %i.icon-ok
-          Offer great service, ease of use, honest pricing, and respect for our customer’s time, money, and trust.
-        %li
-          %i.icon-ok
-          Software should be easy to use and develop.
+        We believe in collaboration, that's why we contribute to open source software communities.
+        We use open source technologies and give back the community.
 
+%hr.divider
+
+.well
+  .row-fluid
+    .span9
+      Want to hire us ?
+      %i.small.gray Click "Contact Us" or call us: +90 258 215 50 10
+    =link_to "Contact Us", "/contact", :class => "span3 btn btn-mini"

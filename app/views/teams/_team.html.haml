@@ -1,0 +1,26 @@
+%li
+  .well
+    .row-fluid.picture-social
+      .span2.text-center
+        = image_tag team.avatar.url(:medium), :class => "thumbnail"
+        %p.hidden
+          %br/
+          = link_to "Github", "https://www.github.com/#{team.github_username}", :target => "_blank"
+          %br/
+          = link_to "Facebook", "https://www.facebook.com/#{team.facebook_username}", :target => "_blank"
+          %br/
+          = link_to "Twitter", "https://twitter.com/#{team.twitter_username}", :target => "_blank"
+          %br/
+          = link_to "Vidipanda Acoount", "http://vidipanda.com/users/#{team.vidipanda_username}", :target => "_blank"
+          %br/
+          = link_to "Dudupress Account", "http://#{team.dudupress_username}.dudupress.com", :target => "_blank"
+      .span10.info
+        %h2= team.name
+        %p.contact
+          %i.icon-briefcase
+          = team.position
+          &nbsp;
+          %i.icon-envelope
+          = mail_to team.email
+        %p.description
+          = team.description

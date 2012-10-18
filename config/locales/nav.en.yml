@@ -1,11 +1,13 @@
 en:
   nav:
+    home: Home
     dashboard: Dashboard
     projects: Works
     projects_extra: Works & Projects
     teams: Teams
-    team_extra: Our Development Team
+    team_extra: Meet The Team
     open_source: Open Source
     open_source_extra: Open Source Projects
+    contact: Contact
     profile: Profile
     signout: Sign Out
