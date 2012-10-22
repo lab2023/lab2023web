@@ -4,6 +4,7 @@ require "bundler/capistrano"
 
 server "127.0.0.1", :web, :app, :db, primary: true
 
+set :port, 22
 set :application, "lab2023"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
