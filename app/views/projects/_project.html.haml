@@ -1,4 +1,4 @@
 .thumbnail.text-center
-  = link_to image_tag(project.cover(:small), alt: project.name), project.website, :target => "_blank"
+  = link_to image_tag(project.cover(:small), alt: project.name, width: 250, height: 250), project.website, :target => "_blank"
   %h3= project.name
   =link_to project.website, project.website, :target => "_blank"
