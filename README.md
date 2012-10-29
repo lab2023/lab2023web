@@ -28,8 +28,6 @@ Once you've made your great commits:
 Credits
 -------
 
-![lab2023 - internet tecnologics](http://lab2023.com/wp-content/uploads/2011/07/logo.png)
-
 Template is maintained  by [lab2023 - internet technologies](http://lab2023.com/)
 
 License
