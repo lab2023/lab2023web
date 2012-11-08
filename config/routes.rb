@@ -18,6 +18,7 @@ Lab2023web::Application.routes.draw do
   resources :pages, :only => [:index, :contact]
 
   match "/contact" => "pages#contact"
+  match '/team' => 'teams#index', :as => 'teams'
 
   devise_for :users
 end
