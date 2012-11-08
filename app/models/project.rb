@@ -13,7 +13,7 @@ class Project < ActiveRecord::Base
                     :path => "public/system/:class/:attachment/:style/:sef_file_name.:extension",
                     :url => "/system/:class/:attachment/:style/:sef_file_name.:extension"
 
-  validates_presence_of :description, :facebook_page, :name, :owner, :twitter_username, :website, :cover
+  validates_presence_of :description, :name, :owner, :website, :cover
 
   Paperclip.interpolates :sef_file_name do |attachment, style|
     attachment.instance.sef_file_name
