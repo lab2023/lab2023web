@@ -1,7 +1,7 @@
 class OpenSourcesController < ApplicationController
   layout false, :only => [:show]
   def index
-    @open_sources = OpenSource.all
+    @open_sources = OpenSource.order("id DESC")
     respond_with(@open_sources)
   end
 

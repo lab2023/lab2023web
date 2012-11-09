@@ -6,7 +6,7 @@
 
 :javascript
   DocumentUp.document({
-    repo:  "#{@open_source.repository_url}",
+    repo:  "#{@open_source.repository_url.gsub("https://github.com/", "")}",
     //name: "DocumentUp",
-    twitter: ["#{@open_source.twitter_username}"],
+    twitter: ["#{@open_source.twitter_username.present? ? @open_source.twitter_username : "lab2023" }"],
   });

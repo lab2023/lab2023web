@@ -3,7 +3,7 @@
     %ul#left-nav.nav.pull-right.text-right
       %li=link_to t('nav.home'), root_path
       %li=link_to t('nav.projects'), projects_path
-      %li=link_to t('nav.open_source'), "http://www.github.com/lab2023", :target => "_blank"
+      %li=link_to t('nav.open_source'), open_sources_path
   .span4.text-center
     %a#logo.gray-linear-gradient{:href => root_path}
       =image_tag "logo.png", :width => 59, :height => 105

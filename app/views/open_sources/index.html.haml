@@ -1,12 +1,15 @@
 = title t('nav.open_source_extra')
 
-- content_for :hero_description do
-  We believe in collaboration, that's why we contribute to open source software communities.
+%hr.divider/
+.text-center.hero
+  %h1= t('nav.open_source_extra')
+  We are developing open source projects
+%hr.divider/
 
 - @open_sources.each do |open_source|
-  %h3.title= open_source.name
-  %hr
-  %p= open_source.description
-  = link_to "Documentation", open_source_path(open_source)
-  |
-  = link_to "Github", "https://github.com/#{open_source.repository_url}"
+  .well
+    %h3.title= open_source.name
+    %p= open_source.description
+    = link_to "Documentation", open_source_path(open_source)
+    |
+    = link_to "Github", open_source.repository_url
