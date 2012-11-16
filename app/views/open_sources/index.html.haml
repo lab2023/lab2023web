@@ -3,13 +3,19 @@
 %hr.divider/
 .text-center.hero
   %h1= t('nav.open_source_extra')
-  We are developing open source projects
+  We love open source
 %hr.divider/
 
 - @open_sources.each do |open_source|
   .well
-    %h3.title= open_source.name
+    %h2.title= open_source.name
     %p= open_source.description
     = link_to "Documentation", open_source_path(open_source)
     |
     = link_to "Github", open_source.repository_url
+    - if open_source.twitter_username.present?
+      |
+      = link_to " | Twitter", "http://www.twitter.com/#{open_source.twitter_username}"
+    - if open_source.facebook_page.present?
+      |
+      = link_to " | Facebook", "http://www.facebook.com/#{open_source.facebook_page}"
