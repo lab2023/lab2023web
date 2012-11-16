@@ -11,12 +11,12 @@
     %th
       = t('activerecord.attributes.open_source.name')
     %th
-      = t('activerecord.attributes.open_source.repostory_url')
+      = t('activerecord.attributes.open_source.repository_url')
     %th{:width => "140px"}
   - @open_sources.each do |open_source|
     %tr
       %td= open_source.name
-      %td= open_source.repostory_url
+      %td= open_source.repository_url
       %td
         = link_to(admins_open_source_path(open_source), class: 'btn', rel: 'tooltip', title: t('tooltips.show')) do
           %i.icon-eye-open

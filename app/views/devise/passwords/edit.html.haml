@@ -4,8 +4,8 @@
   = f.input :reset_password_token, :as => :hidden
   = f.full_error :reset_password_token
   .inputs
-    = f.input :password, :label => "Yeni şifre", :required => true
-    = f.input :password_confirmation, :label => "Yani şifreyi onayla", :required => true
+    = f.input :password, :label => "New Password", :required => true
+    = f.input :password_confirmation, :label => "Confirm New Password", :required => true
   .actions
-    = f.button :submit, "Şifremi değiştir"
+    = f.button :submit, "Submit"
 = render :partial => "devise/shared/links"

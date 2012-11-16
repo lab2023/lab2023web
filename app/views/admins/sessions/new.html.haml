@@ -7,3 +7,6 @@
     = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
   .actions
     = f.button :submit, t('tt.sign_in')
+
+- if devise_mapping.recoverable? && controller_name != 'passwords'
+  = link_to "Forgot Password", new_password_path(resource_name)
