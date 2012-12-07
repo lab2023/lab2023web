@@ -5,10 +5,10 @@
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title lab2023 - Administration | #{yield :title || "Hoşgeldiniz"}
-    %meta{:content => "", :name => "description"}/
-    %meta{:content => "", :name => "author"}/
+    %meta{:content => "lab2023 - internet technologies", :name => "author"}/
     = stylesheet_link_tag "admins", "http://fonts.googleapis.com/css?family=PT+Sans", :media => "all"
     = javascript_include_tag "admins"
+    = favicon_link_tag "favicon.png", :type => "image/png"
     = csrf_meta_tags
     = yield :head
   %body

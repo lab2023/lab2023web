@@ -2,7 +2,7 @@
   .span4
     %ul#left-nav.nav.pull-right.text-right
       %li=link_to t('nav.home'), root_path
-      %li=link_to t('nav.projects'), projects_path
+      %li=link_to t('nav.projects'), works_path
       %li=link_to t('nav.open_source'), open_sources_path
   .span4.text-center
     %a#logo.gray-linear-gradient{:href => root_path}
@@ -12,5 +12,6 @@
     %i#slogan.gray "Simple is perfect"
   .span4
     %ul#right-nav.nav.pull-left.text-left
+      %li=link_to t('nav.story'), stories_path
       %li=link_to t('nav.team_extra'), teams_path
       %li=link_to t('nav.contact'), "/contact"

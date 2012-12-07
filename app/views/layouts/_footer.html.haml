@@ -3,6 +3,7 @@
     .span2
       %h4 Our Company
       %ul
+        %li=link_to "Our story", stories_path
         %li=link_to "Meet the team", teams_path
         %li=link_to "Our works", projects_path
         %li=link_to "Concat us", "/contact"
@@ -25,8 +26,10 @@
       %h4 Follow us
       %ul
         %li=link_to "Github", "http://www.github.com/lab2023", :target => "_blank"
-        %li=link_to "Facebook", "http://www.facebook.com/lab2023" , :target => "_blank"
         %li=link_to "Twitter", "http://www.twitter.com/lab2023", :target => "_blank"
+        %li=link_to "Facebook", "http://www.facebook.com/lab2023" , :target => "_blank"
+        %li=link_to "Vimeo", "http://www.vimeo.com/lab2023", :target => "_blank"
+        %li=link_to "Youtube", "http://www.youtube.com/lab2023", :target => "_blank"
   .row-fluid.small
 
     .span12.text-center
