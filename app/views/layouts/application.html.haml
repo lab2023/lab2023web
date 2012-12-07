@@ -6,10 +6,11 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title
       lab2023 - internet technologies | #{yield :title || "Hoşgeldiniz"}
-    %meta{:content => "", :name => "description"}/
-    %meta{:content => "", :name => "author"}/
+    %meta{:content => "We build web & mobile applications on using Ruby, Ruby On Rails, HTML5, CSS3, JavaScript and many cool technologies", :name => "description"}/
+    %meta{:content => "lab2023 - internet technologies", :name => "author"}/
     = stylesheet_link_tag "application", "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700", :media => "all"
     = javascript_include_tag "application"
+    = favicon_link_tag "favicon.png", :type => "image/png"
     = csrf_meta_tags
     = yield :head
   %body
@@ -22,3 +23,4 @@
       = yield
     %footer#footer
       =render :partial => "layouts/footer"
+    =render :partial => "layouts/trackers"

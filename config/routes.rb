@@ -17,9 +17,11 @@ Lab2023web::Application.routes.draw do
   resources :open_sources, :only => [:index, :show]
   resources :pages, :only => [:index, :contact]
 
+  match "/our-story" => "pages#stories", :as => "stories"
+  match "/works" => "projects#index", :as => "works"
   match "/contact" => "pages#contact"
-  match '/team' => 'teams#index', :as => 'teams'
-  match '/open-source' => 'open_sources#index', :as => 'open_sources'
+  match "/team" => "teams#index", :as => "teams"
+  match "/open-source" => 'open_sources#index', :as => "open_sources"
 
   devise_for :users
 end
